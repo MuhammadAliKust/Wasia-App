@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'asset_image.dart';
+import 'list_view.dart';
 import 'login.dart';
 import 'network_image.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: LoginView());
+    return MaterialApp(home: ListViewDemo());
   }
 }
 

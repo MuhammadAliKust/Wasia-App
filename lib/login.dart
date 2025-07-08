@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:string_validator/string_validator.dart';
+
 class LoginView extends StatelessWidget {
   LoginView({super.key});
 
@@ -76,10 +77,10 @@ class LoginView extends StatelessWidget {
                 );
                 return;
               }
-              if(!emailController.text.isEmail){
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text("Email is not valid.")),
-                );
+              if (!emailController.text.isEmail) {
+                ScaffoldMessenger.of(
+                  context,
+                ).showSnackBar(SnackBar(content: Text("Email is not valid.")));
                 return;
               }
               if (pwdController.text.isEmpty) {
@@ -88,9 +89,11 @@ class LoginView extends StatelessWidget {
                 );
                 return;
               }
-              if(pwdController.text.length < 6){
+              if (pwdController.text.length < 6) {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text("Password must be 6 or more characters.")),
+                  SnackBar(
+                    content: Text("Password must be 6 or more characters."),
+                  ),
                 );
                 return;
               }
