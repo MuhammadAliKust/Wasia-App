@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 class SingleSelectionDemo extends StatefulWidget {
-  SingleSelectionDemo({super.key});
+   SingleSelectionDemo({super.key});
 
   @override
   State<SingleSelectionDemo> createState() => _SingleSelectionDemoState();
 }
 
 class _SingleSelectionDemoState extends State<SingleSelectionDemo> {
-  int selectedIndex = -1;
+   int selectedIndex = -1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Single Selection Demo")),
+      appBar: AppBar(title: Text("List View Demo")),
       body: ListView.builder(
         itemCount: 10,
         itemBuilder: (context, i) {
@@ -26,9 +26,11 @@ class _SingleSelectionDemoState extends State<SingleSelectionDemo> {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: ListTile(
-                onTap: () {
+                onTap: (){
                   selectedIndex = i;
-                  setState(() {});
+                  setState(() {
+
+                  });
                 },
                 leading: Icon(Icons.notifications),
                 title: Text("Selected Index: $selectedIndex"),

@@ -32,7 +32,6 @@ class _MultipleSelectionDemoState extends State<MultipleSelectionDemo> {
                   } else {
                     selectedIndex.add(i);
                   }
-
                   setState(() {});
                 },
                 leading: Icon(Icons.notifications),
